@@ -72,7 +72,7 @@
                 </div>
             </div>
 
-            <label class="upload-zone">
+            <label class="upload-zone" aria-label="Upload File Dropzone" role="button" tabindex="0">
                 <input type="file" style="display:none;" onchange="uploadFile(this)">
                 <div style="font-weight:500; font-size:16px; margin-bottom:8px;">Drop object payload here</div>
                 <div style="color:var(--text-secondary); font-size:14px;">Files are instantly verified via SHA-256 and replicated across all active instances.</div>
@@ -87,7 +87,7 @@
                 <p>Immutable record of all byte streams successfully ingested and hashed by the cluster.</p>
             </div>
             <div class="surface" style="padding:0; overflow:hidden;">
-                <table>
+                <table role="table" aria-label="Object Ledger">
                     <thead>
                         <tr>
                             <th scope="col">Object Key</th>
@@ -134,15 +134,15 @@
                     <div style="color:var(--text-secondary); font-size:14px;">Software-based kernel kills are disabled to prevent accidental data partition loss. To demonstrate high availability to judges, manually terminate a node process (Ctrl+C) in your terminal.</div>
                 </div>
                 <div class="topology-row">
-                    <button class="top-node" disabled style="opacity:0.4; cursor:not-allowed; text-align:left;">
+                    <button aria-label="Terminate Node" role="button" tabindex="0" class="top-node" disabled style="opacity:0.4; cursor:not-allowed; text-align:left;">
                         <div class="top-label" style="color:var(--text-primary);">Terminate N1</div>
                         <div class="badge badge-sim" style="margin-top:12px;">Simulation</div>
                     </button>
-                    <button class="top-node" disabled style="opacity:0.4; cursor:not-allowed; text-align:left;">
+                    <button aria-label="Terminate Node" role="button" tabindex="0" class="top-node" disabled style="opacity:0.4; cursor:not-allowed; text-align:left;">
                         <div class="top-label" style="color:var(--text-primary);">Terminate N2</div>
                         <div class="badge badge-sim" style="margin-top:12px;">Simulation</div>
                     </button>
-                    <button class="top-node" disabled style="opacity:0.4; cursor:not-allowed; text-align:left;">
+                    <button aria-label="Terminate Node" role="button" tabindex="0" class="top-node" disabled style="opacity:0.4; cursor:not-allowed; text-align:left;">
                         <div class="top-label" style="color:var(--text-primary);">Terminate N3</div>
                         <div class="badge badge-sim" style="margin-top:12px;">Simulation</div>
                     </button>
