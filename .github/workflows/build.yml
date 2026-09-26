@@ -1,0 +1,14 @@
+name: Vault CI
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Go
+      uses: actions/setup-go@v4
+      with: { go-version: '1.21' }
+    - name: Run Tests & Coverage
+      run: go test -v -race -coverprofile=coverage.txt ./...
+    - name: Security Scan
+      run: go vet ./...
